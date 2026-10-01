@@ -8,9 +8,11 @@ for %%I in ("%ROOT%") do set "ROOT=%%~fI"
 set "DOCS=%ROOT%\docs"
 
 if not exist "%DOCS%\OnNadirGapFilling.docx" (
-  echo ERROR: missing "%DOCS%\OnNadirGapFilling.docx"
-  echo Run: python "%DOCS%\build_OnNadirGapFilling_report.py"
-  exit /b 1
+  echo This copy has no parent report to sync.
+  echo Opening the nadir-fill viewer instead.
+  echo.
+  call "%~dp0run_demo.bat"
+  exit /b
 )
 
 mkdir "%MIRROR%\figures" 2>nul

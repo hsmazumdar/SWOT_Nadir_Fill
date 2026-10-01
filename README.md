@@ -80,12 +80,13 @@ Full derivation and method ranking: [`methods/METHODS_NADIR_GAP.md`](methods/MET
 
 [`sample_100/`](sample_100/) holds the first 100 observed `ssha_filtered` crops (138 × 69, float32, NaN = missing). That is enough to rerun the fill without the SWOT pass archive.
 
+Double-click [`Run_demo.bat`](Run_demo.bat) in this folder (or `scripts\run_demo.bat`). It opens a window: observed crop on the left, Papoulis–Gerchberg fill on the right. Up and Down move through the 100 crops.
+
 ```bat
-cd /d GitHub_mirror
-python scripts\run_pg_demo.py
+Run_demo.bat
 ```
 
-Needs `numpy` and `Pillow`. Default settings match the 2024 production fill: \(T=60\), \(f_\parallel=0.35\), \(f_\perp=0.55\). Panels land in `sample_100/panels/`, and the run writes `sample_100/demo_summary.json`.
+Needs Python 3 plus `numpy` and `Pillow`. The launcher installs those two packages if they are missing. Default settings match the 2024 production fill: \(T=60\), \(f_\parallel=0.35\), \(f_\perp=0.55\).
 
 ---
 
@@ -93,6 +94,7 @@ Needs `numpy` and `Pillow`. Default settings match the 2024 production fill: \(T
 
 ```
 GitHub_mirror/
+├── Run_demo.bat              ← open the crop viewer
 ├── README.md                 ← this file
 ├── REPORT.md                 ← digest for web browsing
 ├── OnNadirGapFilling.docx    ← primary report
@@ -101,10 +103,12 @@ GitHub_mirror/
 ├── results/                  ← summary JSON from 2024 build + quality audit
 ├── sample_100/               ← 100 observed 138×69 crops + demo panels
 └── scripts/
+    ├── run_demo.bat          ← same viewer launcher
+    ├── nadir_viewer.py       ← the window
     ├── sync_from_docs.bat    ← refresh mirror from ../docs
     ├── build_OnNadirGapFilling_report.py
     ├── nadir_pg.py           ← crop PG fill
-    ├── run_pg_demo.py        ← fill sample_100
+    ├── run_pg_demo.py        ← fill sample_100, write panels
     └── build_sample_100.py  ← rebuild crops from the parent workspace
 ```
 
