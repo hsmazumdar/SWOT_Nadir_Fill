@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "src_root": "E:\\SWOT2024",
+  "out_root": "E:\\SWOT2024_Ok",
+  "n": 10038,
+  "n_ok_new": 9532,
+  "n_skip": 1,
+  "n_fail": 505,
+  "iters": 60,
+  "keep_frac_along": 0.35,
+  "keep_frac_across": 0.55,
+  "workers": 4,
+  "elapsed_s": 11306.2,
+  "manifest": "D:\\RespondSeeSurface\\fill_nadir_gap\\out\\filled_69xfull\\manifest_2024.csv",
+  "method": "clear_central_nadir_gap + papoulis_gerchberg_2d_aniso"
+}

@@ -1,0 +1,15 @@
+{
+  "n": 100,
+  "iters": 60,
+  "keep_frac_along": 0.35,
+  "keep_frac_across": 0.55,
+  "mean_n_gap": 2686.7,
+  "median_n_gap": 2211.5,
+  "max_known_abs_delta": 0.0,
+  "elapsed_s": 21.029,
+  "panels": [
+    "sample_100\\panels\\pg_001.png",
+    "sample_100\\panels\\pg_002.png",
+    "sample_100\\panels\\pg_003.png"
+  ]
+}

@@ -1,0 +1,15 @@
+# Local regenerates / editor junk — keep the mirror publishable
+*.docs
+~$*
+Thumbs.db
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Never mirror bulk SWOT / SLA products from this folder
+*.nc
+*.npy
+!sample_100/crops/*.npy
+SWOT*/
+E_*/
